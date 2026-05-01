@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,7 +8,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Column - fixed dimensions prevent CLS */}
           <div className="min-h-[6rem]">
-            <h3 className="text-xl font-bold text-accent mb-4">Teen Patti Spin</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative h-11 w-11 shrink-0">
+                <Image
+                  src="/teen-patti-spin.webp"
+                  alt="Teen Patti Spin"
+                  width={44}
+                  height={44}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-accent">Teen Patti Spin</h3>
+            </div>
             <p className="text-sm text-gray-300 mb-4 leading-relaxed" style={{ minHeight: '4.5rem' }}>
               Teen Patti Spin is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, Dragon vs Tiger and many other exciting games. Earn real cash with JazzCash & EasyPaisa payments.
             </p>
@@ -42,11 +54,6 @@ export default function Footer() {
               <li>
                 <Link href="/teen-patti-spin-for-pc" className="text-gray-300 hover:text-accent transition-colors">
                   PC Version
-                </Link>
-              </li>
-              <li>
-                <Link href="/teen-patti-spin-for-ios" className="text-gray-300 hover:text-accent transition-colors">
-                  iOS Version
                 </Link>
               </li>
               <li>

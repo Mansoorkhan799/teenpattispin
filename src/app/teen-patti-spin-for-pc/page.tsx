@@ -44,7 +44,7 @@ export default function TeenPattiSpinForPCPage() {
     "@type": "TechArticle",
     "headline": "Teen Patti Spin for PC Download Latest Version for free 2026",
     "description": "Complete guide to download and play Teen Patti Spin on PC using Android emulator. Learn about system requirements, best emulators, and features.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin-logo.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -55,7 +55,7 @@ export default function TeenPattiSpinForPCPage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin-logo.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-04",
@@ -163,7 +163,7 @@ export default function TeenPattiSpinForPCPage() {
         <div className="flex justify-center mb-12">
           <div className="relative" style={{ width: '280px', height: '280px', maxWidth: '100%' }}>
             <Image
-              src="/Teen-Patti-Spin.webp"
+              src="/teen-patti-spin.webp"
               alt="Teen Patti Spin for PC"
               width={280}
               height={280}

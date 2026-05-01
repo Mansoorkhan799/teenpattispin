@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://teenpattispingame.com.pk'),
   title: {
-    default: "Teen Patti Spin Pakistan v1.652 Free Download Official APK",
+    default: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     template: "%s | Teen Patti Spin"
   },
   description: "Download Teen Patti Spin APK – play Teen Patti, Rummy & more. Win real cash via JazzCash & EasyPaisa. Join 500K+ players in Pakistan!",
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/Teen-Patti-Spin.ico', type: 'image/x-icon', sizes: '32x32' },
-      { url: '/Teen-Patti-Spin.webp', type: 'image/webp', sizes: '192x192' },
+      { url: '/teen-patti-spin.ico', type: 'image/x-icon', sizes: '32x32' },
+      { url: '/teen-patti-spin.webp', type: 'image/webp', sizes: '192x192' },
     ],
     apple: [
-      { url: '/Teen-Patti-Spin.webp', sizes: '180x180', type: 'image/webp' }
+      { url: '/teen-patti-spin.webp', sizes: '180x180', type: 'image/webp' }
     ],
-    shortcut: ['/Teen-Patti-Spin.ico']
+    shortcut: ['/teen-patti-spin.ico']
   },
   manifest: '/manifest.json',
   verification: {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     canonical: "https://teenpattispingame.com.pk",
   },
   openGraph: {
-    title: "Teen Patti Spin Pakistan v1.652 Free Download Official APK",
+    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     description: "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
     url: "https://teenpattispingame.com.pk",
     siteName: "Teen Patti Spin",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Teen Patti Spin Pakistan v1.652 Free Download Official APK",
+    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     description: "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
     creator: "@teenpattispin",
   },
@@ -109,14 +109,14 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         
         {/* Favicon - Multiple formats for best browser support */}
-        <link rel="icon" href="/Teen-Patti-Spin.ico" sizes="32x32" />
-        <link rel="icon" href="/Teen-Patti-Spin.webp" type="image/webp" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/Teen-Patti-Spin.webp" sizes="180x180" />
+        <link rel="icon" href="/teen-patti-spin.ico" sizes="32x32" />
+        <link rel="icon" href="/teen-patti-spin.webp" type="image/webp" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/teen-patti-spin.webp" sizes="180x180" />
         
-        <meta property="og:image" content="https://teenpattispingame.com.pk/Teen-Patti-Spin.webp" />
+        <meta property="og:image" content="https://teenpattispingame.com.pk/teen-patti-spin.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://teenpattispingame.com.pk/Teen-Patti-Spin.webp" />
+        <meta name="twitter:image" content="https://teenpattispingame.com.pk/teen-patti-spin.webp" />
         
         {/* Google Analytics - Add your GA4 Measurement ID to NEXT_PUBLIC_GA_ID env var */}
         {process.env.NEXT_PUBLIC_GA_ID && (
@@ -171,7 +171,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Teen Patti Spin",
               "url": "https://teenpattispingame.com.pk",
-              "logo": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+              "logo": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
               "description": "Teen Patti Spin is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, and many other card games with real cash rewards.",
               "sameAs": [
                 "https://www.facebook.com/teenpattispin",

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://teenpattispingame.com.pk/Teen-Patti-Spin.webp',
+        url: 'https://teenpattispingame.com.pk/teen-patti-spin.webp',
         width: 1200,
         height: 630,
         alt: 'Teen Patti Spin Blog – Card Game Guides for Pakistan',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Teen Patti Spin Blog – Guides, Tips & Earning Strategies',
     description: 'Read Teen Patti Spin guides on how to earn money, deposit via JazzCash, win at Teen Patti, and more.',
-    images: ['https://teenpattispingame.com.pk/Teen-Patti-Spin.webp'],
+    images: ['https://teenpattispingame.com.pk/teen-patti-spin.webp'],
   },
 };
 

@@ -12,8 +12,8 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <div className="relative h-10 w-10 mr-2">
             <Image
-              src="/Teen-Patti-Spin.webp"
-              alt="Teen Patti Spin Logo"
+              src="/teen-patti-spin.webp"
+              alt="Teen Patti Spin"
               width={40}
               height={40}
               className="object-contain"
@@ -42,9 +42,6 @@ export default function Header() {
           </Link>
           <Link href="/teen-patti-spin-for-pc" className="text-white hover:text-accent font-medium transition-colors">
             PC Version
-          </Link>
-          <Link href="/teen-patti-spin-for-ios" className="text-white hover:text-accent font-medium transition-colors">
-            iOS Version
           </Link>
           <Link href="/about-us" className="text-white hover:text-accent font-medium transition-colors">
             About Us

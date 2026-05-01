@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "How to Play Teen Patti Spin – Beginner Guide 2026",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to Play Teen Patti Spin - Complete Beginner Guide 2026",
     description: "Learn how to play Teen Patti Spin with step-by-step instructions, rules, and gameplay tips for beginners.",
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -56,7 +56,7 @@ export default function HowToPlayPage() {
     "@type": "BlogPosting",
     "headline": "How to Play Teen Patti Spin - Complete Beginner Guide 2026",
     "description": "Complete beginner guide on how to play Teen Patti Spin, including rules, gameplay, and tips for Teen Patti and other card games.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -67,7 +67,7 @@ export default function HowToPlayPage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-05",
@@ -154,7 +154,7 @@ export default function HowToPlayPage() {
         
         <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
           <Image
-            src="/Teen-Patti-Spin-Game.webp"
+            src="/3-patti-spin-game.webp"
             alt="How to Play Teen Patti Spin"
             fill
             className="object-cover"

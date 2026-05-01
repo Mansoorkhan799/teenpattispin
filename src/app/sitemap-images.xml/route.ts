@@ -2,51 +2,46 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const baseUrl = 'https://teenpattispingame.com.pk';
-  
-  // Define all images used across the site (paths must match files in /public)
+
+  // Paths must match files in /public
   const images = [
     {
       loc: `${baseUrl}/`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
-          title: 'Teen Patti Spin Logo',
-          caption: 'Teen Patti Spin - Pakistan Premier Card Gaming Platform',
+          loc: `${baseUrl}/teen-patti-spin.webp`,
+          title: 'Teen Patti Spin',
+          caption: 'Teen Patti Spin – Pakistan card gaming platform',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-logo.webp`,
-          title: 'Teen Patti Spin Logo Alternative',
-          caption: 'Teen Patti Spin App Logo',
+          loc: `${baseUrl}/3-patti-spin-game.webp`,
+          title: 'Teen Patti Spin Game',
+          caption: 'Teen Patti Spin gaming interface',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Game.webp`,
-          title: 'Teen Patti Spin Game Screenshot 1',
-          caption: 'Teen Patti Spin Gaming Interface',
+          loc: `${baseUrl}/3-patti-spin-game-interface.webp`,
+          title: 'Teen Patti Spin Games',
+          caption: 'Teen Patti Spin games collection',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Games.webp`,
-          title: 'Teen Patti Spin Game Screenshot 2',
-          caption: 'Teen Patti Spin Games Collection',
-        },
-        {
-          loc: `${baseUrl}/Teen-Patti-Spin-Free-Bonus.webp`,
+          loc: `${baseUrl}/3-patti-spin-bonuses.webp`,
           title: 'Teen Patti Spin Bonuses',
-          caption: 'Teen Patti Spin Bonus System',
+          caption: 'Teen Patti Spin bonus system',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Deposit.webp`,
+          loc: `${baseUrl}/3-patti-spin-add-money.webp`,
           title: 'Teen Patti Spin Add Money',
-          caption: 'Teen Patti Spin Deposit System',
+          caption: 'Teen Patti Spin deposit flow',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Referral-Bonus.webp`,
-          title: 'Teen Patti Spin Referral Bonus',
-          caption: 'Teen Patti Spin Referral Program',
+          loc: `${baseUrl}/3-patti-spin-refer-and-earn.webp`,
+          title: 'Teen Patti Spin Referral',
+          caption: 'Teen Patti Spin refer and earn',
         },
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Dragon-Tiger.webp`,
-          title: 'Teen Patti Spin Dragon Tiger',
-          caption: 'Teen Patti Spin Dragon vs Tiger Game',
+          loc: `${baseUrl}/3-patti-spin-spin-wheel.webp`,
+          title: 'Teen Patti Spin Mini Games',
+          caption: 'Teen Patti Spin wheel and mini games',
         },
       ],
     },
@@ -54,7 +49,7 @@ export async function GET() {
       loc: `${baseUrl}/download-teen-patti-spin`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Teen Patti Spin Download Page',
           caption: 'Download Teen Patti Spin APK for Android',
         },
@@ -64,7 +59,7 @@ export async function GET() {
       loc: `${baseUrl}/deposit-money-in-teen-patti-spin`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin-Deposit.webp`,
+          loc: `${baseUrl}/3-patti-spin-add-money.webp`,
           title: 'Teen Patti Spin Deposit Guide',
           caption: 'How to Deposit Money in Teen Patti Spin',
         },
@@ -74,7 +69,7 @@ export async function GET() {
       loc: `${baseUrl}/withdraw-money-from-teen-patti-spin`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Teen Patti Spin Withdrawal Guide',
           caption: 'How to Withdraw Money from Teen Patti Spin',
         },
@@ -84,19 +79,9 @@ export async function GET() {
       loc: `${baseUrl}/teen-patti-spin-for-pc`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Teen Patti Spin for PC',
           caption: 'Download Teen Patti Spin for PC with Emulator',
-        },
-      ],
-    },
-    {
-      loc: `${baseUrl}/teen-patti-spin-for-ios`,
-      images: [
-        {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
-          title: 'Teen Patti Spin for iOS',
-          caption: 'Download Teen Patti Spin for iPhone and iPad',
         },
       ],
     },
@@ -104,7 +89,7 @@ export async function GET() {
       loc: `${baseUrl}/about-us`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Teen Patti Spin About Us',
           caption: 'About Teen Patti Spin Gaming Platform',
         },
@@ -114,7 +99,7 @@ export async function GET() {
       loc: `${baseUrl}/blog`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Teen Patti Spin Blog',
           caption: 'Teen Patti Spin Gaming News and Guides',
         },
@@ -124,7 +109,7 @@ export async function GET() {
       loc: `${baseUrl}/blog/is-teen-patti-spin-real-or-fake`,
       images: [
         {
-          loc: `${baseUrl}/Teen-Patti-Spin.webp`,
+          loc: `${baseUrl}/teen-patti-spin.webp`,
           title: 'Is Teen Patti Spin Real or Fake',
           caption: 'Complete Guide: Teen Patti Spin Legitimacy Review',
         },
@@ -132,18 +117,25 @@ export async function GET() {
     },
   ];
 
-  // Generate XML
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${images.map(page => `  <url>
+${images
+  .map(
+    (page) => `  <url>
     <loc>${page.loc}</loc>
-${page.images.map(img => `    <image:image>
+${page.images
+  .map(
+    (img) => `    <image:image>
       <image:loc>${img.loc}</image:loc>
       <image:title>${img.title}</image:title>
       <image:caption>${img.caption}</image:caption>
-    </image:image>`).join('\n')}
-  </url>`).join('\n')}
+    </image:image>`
+  )
+  .join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
 
   return new NextResponse(xml, {
@@ -153,4 +145,3 @@ ${page.images.map(img => `    <image:image>
     },
   });
 }
-

@@ -1,10 +1,40 @@
 import Image from "next/image";
 import Link from 'next/link';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+
+const sectionShell =
+  'rounded-3xl border border-white/10 bg-gradient-to-br from-[#0c1229] via-[#06091F] to-[#0a1628] p-6 shadow-2xl shadow-black/40 md:p-10';
+
+const featureCard =
+  'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#101b38]/85 to-[#06091F] p-5 shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-500/35 hover:shadow-sky-500/10 md:p-6';
+
+const stepPanel =
+  'rounded-2xl border border-white/10 bg-[#06091F]/50 p-5 backdrop-blur-sm md:p-6';
+
+function StepRow({ n, children }: { n: number; children: ReactNode }) {
+  return (
+    <li className="flex gap-4 rounded-2xl border border-white/10 bg-[#06091F]/70 px-4 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/40 hover:bg-[#0A1029]/80">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-cyan-700 text-sm font-bold text-white shadow-lg shadow-sky-500/30">
+        {n}
+      </span>
+      <span className="pt-0.5 leading-relaxed text-gray-300">{children}</span>
+    </li>
+  );
+}
+
+function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
+  return (
+    <div className="mb-8 md:mb-10">
+      <h2 className="text-2xl font-bold tracking-tight text-[#FFA500] md:text-3xl lg:text-4xl">{title}</h2>
+      {subtitle ? <p className="mt-2 max-w-3xl text-gray-400">{subtitle}</p> : null}
+    </div>
+  );
+}
 
 export const metadata: Metadata = {
   title: {
-    default: "Teen Patti Spin Pakistan v1.652(0) Free APK Download 2026",
+    default: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     template: "%s | Teen Patti Spin"
   },
   description:
@@ -27,25 +57,25 @@ export const metadata: Metadata = {
     "best earning app Pakistan"
   ],
   openGraph: {
-    title: 'Teen Patti Spin Pakistan v1.652(0) Free APK Download 2026',
+    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     description:
       "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti Spin – Classic, Joker, Muflis, AK47, Rummy & more. Earn real money with JazzCash & EasyPaisa.",
     images: [
       {
-        url: 'https://teenpattispingame.com.pk/Teen-Patti-Spin-logo.webp',
+        url: 'https://teenpattispingame.com.pk/teen-patti-spin.webp',
         width: 1200,
         height: 630,
-        alt: 'Teen Patti Spin APK Download'
+        alt: 'Teen Patti Spin – official app artwork'
       }
     ],
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Teen Patti Spin Pakistan v1.652(0) Free APK Download 2026',
+    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
     description:
       "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti Spin & earn real money with JazzCash & EasyPaisa.",
-    images: ['https://teenpattispingame.com.pk/Teen-Patti-Spin-logo.webp']
+    images: ['https://teenpattispingame.com.pk/teen-patti-spin.webp']
   }
 };
 
@@ -77,7 +107,7 @@ export default function Home() {
         "url": "https://teenpattispingame.com.pk/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin-logo.webp",
+          "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
           "width": 512,
           "height": 512
         },
@@ -109,9 +139,9 @@ export default function Home() {
         "description":
           "Play Teen Patti Spin – Classic, Joker, Muflis, AK47, Rummy, Dragon Tiger and more. Earn real money with JazzCash & EasyPaisa withdrawals.",
         "screenshot": [
-          "https://teenpattispingame.com.pk/Teen-Patti-Spin-Game.webp",
-          "https://teenpattispingame.com.pk/Teen-Patti-Spin-Games.webp",
-          "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+          "https://teenpattispingame.com.pk/teen-patti-spin.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-game.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-game-interface.webp"
         ],
         "author": {
           "@type": "Organization",
@@ -147,16 +177,30 @@ export default function Home() {
       <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="md:flex md:items-start md:justify-between md:space-x-12 lg:space-x-20">
           <div className="md:w-1/2 space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                <Link href="/" className="hover:text-[#FFA500] transition-colors">
-                  <span className="text-white">Teen Patti Spin</span>
-                </Link>
-              </h1>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-                <span className="text-[#FFA500]">3 Patti Spin Game Download APK</span>{' '}
-                <span className="text-white">– Pakistani Earning App 2026</span>
-              </h2>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center md:items-start md:gap-5">
+              <div className="relative h-20 w-20 shrink-0 sm:h-24 sm:w-24 md:hidden">
+                <Image
+                  src="/teen-patti-spin.webp"
+                  alt="Teen Patti Spin"
+                  width={96}
+                  height={96}
+                  className="object-contain drop-shadow-xl"
+                  priority
+                  fetchPriority="high"
+                  sizes="96px"
+                />
+              </div>
+              <div className="space-y-4 text-center sm:text-left">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+                  <Link href="/" className="hover:text-[#FFA500] transition-colors">
+                    <span className="text-white">Teen Patti Spin</span>
+                  </Link>
+                </h1>
+                <h2 className="text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl lg:text-[2.5rem] lg:leading-tight">
+                  <span className="block text-[#FFA500]">Pakistan&apos;s Most Trusted</span>
+                  <span className="block text-white">3 Patti Gaming Platform 2026</span>
+                </h2>
+              </div>
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -179,30 +223,45 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="flex flex-row gap-4 justify-center mt-8 mb-4 min-h-[120px]">
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px] min-h-[120px] flex flex-col justify-center">
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1 leading-tight">500K+</div>
-                <div className="text-gray-400 text-sm leading-tight">Downloads</div>
-              </div>
-
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px] min-h-[120px] flex flex-col justify-center">
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1 leading-tight">v1.652</div>
-                <div className="text-gray-400 text-sm leading-tight">Latest Version</div>
-              </div>
-
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px] min-h-[120px] flex flex-col justify-center">
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1 leading-tight">54MB</div>
-                <div className="text-gray-400 text-sm leading-tight">App Size</div>
-              </div>
+            <div className="mx-auto mt-8 mb-4 grid min-h-[120px] max-w-xl grid-cols-3 gap-3 sm:gap-4">
+              {[
+                {
+                  label: 'Downloads',
+                  value: '500K+',
+                  icon: (
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  ),
+                },
+                {
+                  label: 'Latest',
+                  value: 'v1.652',
+                  icon: <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />,
+                },
+                {
+                  label: 'App size',
+                  value: '54MB',
+                  icon: (
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                  ),
+                },
+              ].map((s) => (
+                <div
+                  key={s.label}
+                  className="group relative flex min-h-[118px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#0f1a3a]/90 to-[#06091F] px-2 py-4 text-center shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-400/40 hover:shadow-amber-500/10 sm:px-3"
+                >
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                  <svg
+                    className="mb-2 h-6 w-6 text-amber-400 transition-transform group-hover:scale-110"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden
+                  >
+                    {s.icon}
+                  </svg>
+                  <div className="text-lg font-bold leading-tight text-white sm:text-xl">{s.value}</div>
+                  <div className="mt-1 text-[10px] font-medium uppercase tracking-wider text-gray-500 sm:text-xs">{s.label}</div>
+                </div>
+              ))}
             </div>
 
             <p className="text-gray-400 text-sm text-center italic">*Available for Android 5.0+ devices</p>
@@ -212,8 +271,8 @@ export default function Home() {
           <div className="hidden md:block md:w-1/2 md:mt-8">
             <div className="relative ml-auto w-[320px] h-[320px] max-w-full">
               <Image
-                src="/Teen-Patti-Spin.webp"
-                alt="Teen Patti Spin Logo"
+                src="/teen-patti-spin.webp"
+                alt="Teen Patti Spin"
                 width={320}
                 height={320}
                 className="object-contain drop-shadow-2xl w-full h-full"
@@ -229,8 +288,8 @@ export default function Home() {
           <div className="mt-8 md:hidden">
             <div className="relative mx-auto w-[280px] h-[280px] max-w-full">
               <Image
-                src="/Teen-Patti-Spin.webp"
-                alt="Teen Patti Spin Logo"
+                src="/teen-patti-spin.webp"
+                alt="Teen Patti Spin"
                 width={280}
                 height={280}
                 className="object-contain drop-shadow-2xl w-full h-full"
@@ -246,8 +305,9 @@ export default function Home() {
 
       {/* Download Info Table */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="download">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#FFA500]">Teen Patti Spin – App Info</h2>
-        <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-800">
+        <div className={sectionShell}>
+          <SectionHeading title="Teen Patti Spin – App Info" subtitle="Quick reference for version, size, and device requirements before you install." />
+        <div className="overflow-hidden rounded-2xl border border-white/10 shadow-xl">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-800">
               <tbody className="divide-y divide-gray-800">
@@ -291,12 +351,16 @@ export default function Home() {
             </table>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Introduction */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="what-is-teen-patti-spin">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#FFA500]">Introduction to Teen Patti Spin</h2>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="Introduction to Teen Patti Spin"
+            subtitle="A lightweight earning and card-game hub built for Pakistani players who want variety and smooth play."
+          />
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
               Teen Patti Spin is one of the most popular online gaming platforms where you can play multiple games and earn money. You can enjoy real classic Teen Patti games, different modes and variations like Joker mode, AK47, Muflis and many more to play and earn. The multiple gaming options make the games more fun, and you never get bored while playing.
@@ -310,9 +374,12 @@ export default function Home() {
 
       {/* What Makes Teen Patti Spin Unique */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">What Makes Teen Patti Spin Unique?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={sectionShell}>
+          <SectionHeading
+            title="What Makes Teen Patti Spin Unique?"
+            subtitle="Performance, community, modes, fair play, and private tables in one polished experience."
+          />
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
             {[
               {
                 title: '01. Smooth Performance',
@@ -340,10 +407,11 @@ export default function Home() {
                   'One of the best features of Teen Patti Spin is private tables. You can create a table, give links or codes to your friends, and the people who have the code can join. This makes the game more fun, and you feel like a real card game at home. VIP rooms are given to experienced players where they can join high-stakes tables to earn big money rewards.'
               }
             ].map((f) => (
-              <div key={f.title} className="bg-[#0a1029]/50 rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-bold mb-3 text-white">{f.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{f.body}</p>
-              </div>
+              <article key={f.title} className={featureCard}>
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent opacity-60" />
+                <h3 className="text-lg font-bold text-white md:text-xl">{f.title}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-gray-300">{f.body}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -351,9 +419,12 @@ export default function Home() {
 
       {/* Key Gaming Features */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Key Gaming Features</h2>
-          <div className="space-y-8">
+        <div className={sectionShell}>
+          <SectionHeading
+            title="Key Gaming Features"
+            subtitle="Graphics, variations, support, rewards, payments, chat, practice mode, and fresh updates."
+          />
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
             {[
               {
                 heading: 'Smooth Graphics',
@@ -396,10 +467,11 @@ export default function Home() {
                   'Regular updates help to give the best, lag-free experience of the games. Updates may include bug fixes, new promotional events, and new games. New themes are added so that when you are playing, you can get something new in the interface to avoid boredom.'
               }
             ].map((f) => (
-              <div key={f.heading}>
-                <h3 className="text-2xl font-bold mb-3 text-white">{f.heading}</h3>
-                <p className="text-gray-300 leading-relaxed">{f.body}</p>
-              </div>
+              <article key={f.heading} className={featureCard}>
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/40 to-transparent opacity-70" />
+                <h3 className="text-lg font-bold text-white md:text-xl">{f.heading}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-gray-300">{f.body}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -407,56 +479,73 @@ export default function Home() {
 
       {/* How to Download */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="how-to-download">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">How to Download the Latest Version of Teen Patti Spin?</h2>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="How to Download the Latest Version of Teen Patti Spin?"
+            subtitle="Choose your platform and follow the numbered steps—each path stays on the official site."
+          />
 
-          <div className="space-y-10">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">For Android</h3>
-              <p className="text-gray-300 mb-4">Follow the step-by-step process to download the Teen Patti Spin application on your Android device:</p>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open your browser and search for the latest version on <Link href="/download-teen-patti-spin" className="text-accent hover:underline">teenpattispingame.com.pk</Link>.</li>
-                <li>Make sure to visit a trusted site that is safe and secure.</li>
-                <li>Locate the download button and tap on it to start the process.</li>
-                <li>Wait until the file is downloaded and saved to your device.</li>
-                <li>Go to your phone Settings &gt; Security and enable Installation from unknown sources.</li>
-                <li>Open your download manager and look for the Teen Patti Spin APK file.</li>
-                <li>Click on the downloaded file to start the installation and wait until it completes.</li>
-                <li>Once installation is complete, launch the app to start playing and earning.</li>
-              </ol>
+          <div className="space-y-8 md:space-y-10">
+            <div className={stepPanel}>
+              <h3 className="mb-2 text-xl font-bold text-white md:text-2xl">For Android</h3>
+              <p className="mb-4 text-gray-400">Follow the step-by-step process to download the Teen Patti Spin application on your Android device:</p>
+              <ul className="space-y-3">
+                <StepRow n={1}>
+                  Open your browser and search for the latest version on{' '}
+                  <Link href="/download-teen-patti-spin" className="text-sky-400 underline-offset-2 hover:text-sky-300 hover:underline">
+                    teenpattispingame.com.pk
+                  </Link>
+                  .
+                </StepRow>
+                <StepRow n={2}>Make sure to visit a trusted site that is safe and secure.</StepRow>
+                <StepRow n={3}>Locate the download button and tap on it to start the process.</StepRow>
+                <StepRow n={4}>Wait until the file is downloaded and saved to your device.</StepRow>
+                <StepRow n={5}>Go to your phone Settings &gt; Security and enable Installation from unknown sources.</StepRow>
+                <StepRow n={6}>Open your download manager and look for the Teen Patti Spin APK file.</StepRow>
+                <StepRow n={7}>Click on the downloaded file to start the installation and wait until it completes.</StepRow>
+                <StepRow n={8}>Once installation is complete, launch the app to start playing and earning.</StepRow>
+              </ul>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">For iOS</h3>
-              <p className="text-gray-300 mb-4">If you are using an iOS device, follow these simple steps:</p>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open the Safari browser on your iOS device, such as an iPhone or iPad.</li>
-                <li>Make sure your browser is updated for better and smoother performance.</li>
-                <li>Search for the official website of Teen Patti Spin.</li>
-                <li>Open the official website and find the download button.</li>
-                <li>Tap on the download button and wait until the download completes.</li>
-                <li>Once installed, allow permission if asked.</li>
-                <li>Go to Settings &gt; General &gt; Device Management and tap “Trust this developer”.</li>
-                <li>Launch the app on your device to start making money.</li>
-              </ol>
-              <p className="text-gray-300 mt-4">
-                See the dedicated guide on the <Link href="/teen-patti-spin-for-ios" className="text-accent hover:underline">Teen Patti Spin for iOS</Link> page.
+            <div className={stepPanel}>
+              <h3 className="mb-2 text-xl font-bold text-white md:text-2xl">For iOS</h3>
+              <p className="mb-4 text-gray-400">If you are using an iOS device, follow these simple steps:</p>
+              <ul className="space-y-3">
+                <StepRow n={1}>Open the Safari browser on your iOS device, such as an iPhone or iPad.</StepRow>
+                <StepRow n={2}>Make sure your browser is updated for better and smoother performance.</StepRow>
+                <StepRow n={3}>Search for the official website of Teen Patti Spin.</StepRow>
+                <StepRow n={4}>Open the official website and find the download button.</StepRow>
+                <StepRow n={5}>Tap on the download button and wait until the download completes.</StepRow>
+                <StepRow n={6}>Once installed, allow permission if asked.</StepRow>
+                <StepRow n={7}>Go to Settings &gt; General &gt; Device Management and tap “Trust this developer”.</StepRow>
+                <StepRow n={8}>Launch the app on your device to start making money.</StepRow>
+              </ul>
+              <p className="mt-4 text-sm text-gray-400">
+                Use only the official site{' '}
+                <Link href="/" className="font-medium text-sky-400 underline-offset-2 hover:text-sky-300 hover:underline">
+                  teenpattispingame.com.pk
+                </Link>{' '}
+                in Safari—avoid unofficial installers.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">For PC</h3>
-              <p className="text-gray-300 mb-4">If you want to install Teen Patti Spin on your PC, follow the steps below:</p>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Download an Android Emulator to create an Android setup on your PC.</li>
-                <li>Install an emulator like BlueStacks, LD Player, or Nox Player from its official website.</li>
-                <li>Open the emulator and sign in with your Google Account.</li>
-                <li>Download the latest version of the Teen Patti Spin app from a trusted website.</li>
-                <li>Tap on the Install APK option inside the emulator and allow unknown sources if asked.</li>
-                <li>Once the game is successfully installed, you can start exploring games to earn real cash.</li>
-              </ol>
-              <p className="text-gray-300 mt-4">
-                See the full guide on the <Link href="/teen-patti-spin-for-pc" className="text-accent hover:underline">Teen Patti Spin for PC</Link> page.
+            <div className={stepPanel}>
+              <h3 className="mb-2 text-xl font-bold text-white md:text-2xl">For PC</h3>
+              <p className="mb-4 text-gray-400">If you want to install Teen Patti Spin on your PC, follow the steps below:</p>
+              <ul className="space-y-3">
+                <StepRow n={1}>Download an Android Emulator to create an Android setup on your PC.</StepRow>
+                <StepRow n={2}>Install an emulator like BlueStacks, LD Player, or Nox Player from its official website.</StepRow>
+                <StepRow n={3}>Open the emulator and sign in with your Google Account.</StepRow>
+                <StepRow n={4}>Download the latest version of the Teen Patti Spin app from a trusted website.</StepRow>
+                <StepRow n={5}>Tap on the Install APK option inside the emulator and allow unknown sources if asked.</StepRow>
+                <StepRow n={6}>Once the game is successfully installed, you can start exploring games to earn real cash.</StepRow>
+              </ul>
+              <p className="mt-4 text-sm text-gray-400">
+                See the full guide on the{' '}
+                <Link href="/teen-patti-spin-for-pc" className="font-medium text-sky-400 underline-offset-2 hover:text-sky-300 hover:underline">
+                  Teen Patti Spin for PC
+                </Link>{' '}
+                page.
               </p>
             </div>
           </div>
@@ -465,9 +554,9 @@ export default function Home() {
 
       {/* System Requirements */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">System Requirements</h2>
-          <div className="overflow-hidden rounded-2xl border border-gray-800">
+        <div className={sectionShell}>
+          <SectionHeading title="System Requirements" subtitle="Minimum specs so tables load smoothly on Android, iOS, and PC." />
+          <div className="overflow-hidden rounded-2xl border border-white/10">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-800">
                 <thead className="bg-[#0a1029]/80">
@@ -512,35 +601,38 @@ export default function Home() {
 
       {/* How to Create an Account */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">How to create an Account on Teen Patti Spin?</h2>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="How to create an Account on Teen Patti Spin?"
+            subtitle="Register once, verify with OTP, then sign in securely from any device."
+          />
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Registration Process</h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open the Teen Patti Spin app on your device and make sure you are using the official app.</li>
-                <li>On the main screen, tap on the “Play as Guest” option to enter the game lobby.</li>
-                <li>Inside the game, go to the Profile section and bind your active mobile number or Email address.</li>
-                <li>You will receive an OTP for the verification process.</li>
-                <li>Check your inbox and enter the OTP correctly.</li>
-                <li>Create a strong password with a mix of letters, numbers, and symbols.</li>
-                <li>Recheck all the details you entered and tap on Register.</li>
-                <li>The account is successfully created – you can now explore the different games.</li>
-              </ol>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className={stepPanel}>
+              <h3 className="mb-4 text-xl font-bold text-white md:text-2xl">Registration Process</h3>
+              <ul className="space-y-3">
+                <StepRow n={1}>Open the Teen Patti Spin app on your device and make sure you are using the official app.</StepRow>
+                <StepRow n={2}>On the main screen, tap on the “Play as Guest” option to enter the game lobby.</StepRow>
+                <StepRow n={3}>Inside the game, go to the Profile section and bind your active mobile number or Email address.</StepRow>
+                <StepRow n={4}>You will receive an OTP for the verification process.</StepRow>
+                <StepRow n={5}>Check your inbox and enter the OTP correctly.</StepRow>
+                <StepRow n={6}>Create a strong password with a mix of letters, numbers, and symbols.</StepRow>
+                <StepRow n={7}>Recheck all the details you entered and tap on Register.</StepRow>
+                <StepRow n={8}>The account is successfully created – you can now explore the different games.</StepRow>
+              </ul>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Login Process</h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open the official Teen Patti Spin application on your device.</li>
-                <li>On the main screen, tap on the Sign in or Log in button.</li>
-                <li>Enter your registered mobile number or Email address.</li>
-                <li>Type the password you used while registering your account.</li>
-                <li>If you have forgotten your password, use the “Forgot Password” option to create a new one.</li>
-                <li>Double-check all your login details and tap on the Login button.</li>
-                <li>Your account is now logged in – start playing different games and earn money.</li>
-              </ol>
+            <div className={stepPanel}>
+              <h3 className="mb-4 text-xl font-bold text-white md:text-2xl">Login Process</h3>
+              <ul className="space-y-3">
+                <StepRow n={1}>Open the official Teen Patti Spin application on your device.</StepRow>
+                <StepRow n={2}>On the main screen, tap on the Sign in or Log in button.</StepRow>
+                <StepRow n={3}>Enter your registered mobile number or Email address.</StepRow>
+                <StepRow n={4}>Type the password you used while registering your account.</StepRow>
+                <StepRow n={5}>If you have forgotten your password, use the “Forgot Password” option to create a new one.</StepRow>
+                <StepRow n={6}>Double-check all your login details and tap on the Login button.</StepRow>
+                <StepRow n={7}>Your account is now logged in – start playing different games and earn money.</StepRow>
+              </ul>
             </div>
           </div>
         </div>
@@ -548,36 +640,51 @@ export default function Home() {
 
       {/* Deposit / Withdraw */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">How to Deposit and Withdraw Earnings on Teen Patti Spin?</h2>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="How to Deposit and Withdraw Earnings on Teen Patti Spin?"
+            subtitle="Use JazzCash or EasyPaisa from the in-app wallet—confirm details before every transfer."
+          />
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Deposit Method</h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open the Teen Patti Spin app and log in to your account.</li>
-                <li>On the main menu, tap on the deposit button.</li>
-                <li>Choose a payment method, like EasyPaisa or JazzCash.</li>
-                <li>Enter the amount you want to add to your game wallet.</li>
-                <li>Recheck all the details and tap on the deposit button.</li>
-                <li>Enter your transaction PIN to confirm the payment request.</li>
-                <li>Wait a few seconds – your money will be added to your app wallet.</li>
-              </ol>
-              <p className="text-gray-300 mt-4">Read the full guide on the <Link href="/deposit-money-in-teen-patti-spin" className="text-accent hover:underline">deposit page</Link>.</p>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className={stepPanel}>
+              <h3 className="mb-4 text-xl font-bold text-white md:text-2xl">Deposit Method</h3>
+              <ul className="space-y-3">
+                <StepRow n={1}>Open the Teen Patti Spin app and log in to your account.</StepRow>
+                <StepRow n={2}>On the main menu, tap on the deposit button.</StepRow>
+                <StepRow n={3}>Choose a payment method, like EasyPaisa or JazzCash.</StepRow>
+                <StepRow n={4}>Enter the amount you want to add to your game wallet.</StepRow>
+                <StepRow n={5}>Recheck all the details and tap on the deposit button.</StepRow>
+                <StepRow n={6}>Enter your transaction PIN to confirm the payment request.</StepRow>
+                <StepRow n={7}>Wait a few seconds – your money will be added to your app wallet.</StepRow>
+              </ul>
+              <p className="mt-4 text-sm text-gray-400">
+                Read the full guide on the{' '}
+                <Link href="/deposit-money-in-teen-patti-spin" className="font-medium text-sky-400 underline-offset-2 hover:text-sky-300 hover:underline">
+                  deposit page
+                </Link>
+                .
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Withdrawal Method</h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-300">
-                <li>Open the official app and log in to your account.</li>
-                <li>Go to the wallet section and tap on Withdraw.</li>
-                <li>Select your payment method and enter the required details carefully.</li>
-                <li>Enter the amount you want to withdraw from the game.</li>
-                <li>Double-check all the details to avoid any errors.</li>
-                <li>Click on Submit and wait for the request to complete.</li>
-                <li>After a few minutes, your money will be transferred to your selected account.</li>
-              </ol>
-              <p className="text-gray-300 mt-4">Read the full guide on the <Link href="/withdraw-money-from-teen-patti-spin" className="text-accent hover:underline">withdraw page</Link>.</p>
+            <div className={stepPanel}>
+              <h3 className="mb-4 text-xl font-bold text-white md:text-2xl">Withdrawal Method</h3>
+              <ul className="space-y-3">
+                <StepRow n={1}>Open the official app and log in to your account.</StepRow>
+                <StepRow n={2}>Go to the wallet section and tap on Withdraw.</StepRow>
+                <StepRow n={3}>Select your payment method and enter the required details carefully.</StepRow>
+                <StepRow n={4}>Enter the amount you want to withdraw from the game.</StepRow>
+                <StepRow n={5}>Double-check all the details to avoid any errors.</StepRow>
+                <StepRow n={6}>Click on Submit and wait for the request to complete.</StepRow>
+                <StepRow n={7}>After a few minutes, your money will be transferred to your selected account.</StepRow>
+              </ul>
+              <p className="mt-4 text-sm text-gray-400">
+                Read the full guide on the{' '}
+                <Link href="/withdraw-money-from-teen-patti-spin" className="font-medium text-sky-400 underline-offset-2 hover:text-sky-300 hover:underline">
+                  withdraw page
+                </Link>
+                .
+              </p>
             </div>
           </div>
         </div>
@@ -585,12 +692,12 @@ export default function Home() {
 
       {/* Bonuses */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Teen Patti Spin Bonuses and Promotions</h2>
-          <p className="text-gray-300 leading-relaxed mb-8">
-            Teen Patti Spin APK offers different bonuses and promotions to its users, whether you are a new or regular player.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={sectionShell}>
+          <SectionHeading
+            title="Teen Patti Spin Bonuses and Promotions"
+            subtitle="New and returning players get chips, rebates, and referral rewards—always check in-app banners for live offers."
+          />
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
             {[
               { t: '01. Welcome Bonus', d: 'New users on Teen Patti Spin can receive a welcome bonus. It can be free chips, cash balance, or rewards added directly to your game wallet so beginners can start playing without spending their own money.' },
               { t: '02. 111 Bonus', d: 'A special promotional reward given to both new and regular players. The 111 bonus adds extra chips depending on your activity. Check in-app promotions for current offers.' },
@@ -599,10 +706,11 @@ export default function Home() {
               { t: '05. Cashback Bonuses', d: 'Cashback bonuses help reduce the risk of losses. When you play games and lose chips constantly, cashback bonuses help you recover some amount as bonus chips so you can play with confidence.' },
               { t: '06. Referral Bonus Program', d: 'Get a unique code or link that you can share with your friends. When someone joins the platform using your code, you receive a fixed amount of commission – no need to stay active to earn.' }
             ].map((b) => (
-              <div key={b.t} className="bg-[#0a1029]/50 rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-bold mb-3 text-white">{b.t}</h3>
-                <p className="text-gray-300 leading-relaxed">{b.d}</p>
-              </div>
+              <article key={b.t} className={featureCard}>
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent opacity-70" />
+                <h3 className="text-lg font-bold text-white md:text-xl">{b.t}</h3>
+                <p className="mt-3 flex-1 leading-relaxed text-gray-300">{b.d}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -610,103 +718,146 @@ export default function Home() {
 
       {/* Why Popular */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#FFA500]">Why is Teen Patti Spin Popular in Pakistan?</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Teen Patti Spin is the most popular online gaming platform in Pakistan. Many players choose Teen Patti Spin as an earning app due to the following reasons:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>This earning app not only offers one game – you can play multiple games according to your interests.</li>
-            <li>Multiple beginner-friendly games depend largely on luck, like Dragon vs Tiger, Roulette, Poker, and slot games.</li>
-            <li>The platform uses local payment methods for Pakistani users, such as JazzCash and EasyPaisa.</li>
-            <li>Daily rewards and bonuses are given to maximize your earnings, which makes it trending among casino lovers.</li>
-            <li>You do not need high-speed internet to use this app, which makes it useful for everyone to play smoothly.</li>
-          </ul>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="Why is Teen Patti Spin Popular in Pakistan?"
+            subtitle="Players stay for variety, local payments, rewards, and performance on everyday networks."
+          />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              'This earning app not only offers one game – you can play multiple games according to your interests.',
+              'Multiple beginner-friendly games depend largely on luck, like Dragon vs Tiger, Roulette, Poker, and slot games.',
+              'The platform uses local payment methods for Pakistani users, such as JazzCash and EasyPaisa.',
+              'Daily rewards and bonuses are given to maximize your earnings, which makes it trending among casino lovers.',
+              'You do not need high-speed internet to use this app, which makes it useful for everyone to play smoothly.'
+            ].map((text, i) => (
+              <div
+                key={i}
+                className="flex gap-3 rounded-2xl border border-white/10 bg-[#06091F]/60 p-4 shadow-md transition-all hover:border-sky-500/30 md:p-5"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-700 text-sm font-bold text-white shadow-lg shadow-amber-600/25">
+                  {i + 1}
+                </span>
+                <p className="leading-relaxed text-gray-300">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Customer Support */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Customer Support of Teen Patti Spin</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#0a1029]/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold mb-3 text-white">Live Chat Support</h3>
-              <p className="text-gray-300 leading-relaxed">
+        <div className={sectionShell}>
+          <SectionHeading title="Customer Support of Teen Patti Spin" subtitle="Three channels so you can pick speed or depth depending on your issue." />
+          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+            <article className={featureCard}>
+              <div className="mb-3 inline-flex rounded-lg bg-sky-500/15 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-sky-300">Fastest</div>
+              <h3 className="text-lg font-bold text-white md:text-xl">Live Chat Support</h3>
+              <p className="mt-3 flex-1 leading-relaxed text-gray-300">
                 The easiest and fastest way to contact the support team. Open the app, look for the Help or Support section, and start chatting. Use this for instant communication on issues like deposit/withdrawal delays or technical game problems.
               </p>
-            </div>
-            <div className="bg-[#0a1029]/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold mb-3 text-white">Email Support</h3>
-              <p className="text-gray-300 leading-relaxed">
+            </article>
+            <article className={featureCard}>
+              <div className="mb-3 inline-flex rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-violet-300">Detailed</div>
+              <h3 className="text-lg font-bold text-white md:text-xl">Email Support</h3>
+              <p className="mt-3 flex-1 leading-relaxed text-gray-300">
                 Teen Patti Spin provides an official email so you can write your issues and get help. Compose an email, describe your issue clearly and add screenshots if required. Email support may take time but it is reliable.
               </p>
-            </div>
-            <div className="bg-[#0a1029]/50 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-xl font-bold mb-3 text-white">FAQs Section</h3>
-              <p className="text-gray-300 leading-relaxed">
+            </article>
+            <article className={featureCard}>
+              <div className="mb-3 inline-flex rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-300">Self-serve</div>
+              <h3 className="text-lg font-bold text-white md:text-xl">FAQs Section</h3>
+              <p className="mt-3 flex-1 leading-relaxed text-gray-300">
                 The game has a section where common problems and their solutions are given. If you are facing any problem, check the FAQs first to save time and find a quick solution.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       {/* Responsible Gaming Tips */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#FFA500]">Responsible Gaming Tips That You Should Follow</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
-            Online gaming is fun, but it can also lead to stress if you do not play responsibly. Here are some responsible gaming tips you can follow while playing on Teen Patti Spin:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>Make sure you are using the official app of Teen Patti Spin.</li>
-            <li>Avoid clicking on random links claiming free chips and bonuses.</li>
-            <li>Avoid playing when you feel angry or under emotional stress.</li>
-            <li>Treat the games as entertainment, not a guaranteed income source.</li>
-            <li>Do not share your login information with friends.</li>
-            <li>Take regular breaks during longer sessions.</li>
-          </ul>
+        <div className={sectionShell}>
+          <SectionHeading
+            title="Responsible Gaming Tips That You Should Follow"
+            subtitle="Stay in control: official app only, healthy limits, and treating play as entertainment."
+          />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              'Make sure you are using the official app of Teen Patti Spin.',
+              'Avoid clicking on random links claiming free chips and bonuses.',
+              'Avoid playing when you feel angry or under emotional stress.',
+              'Treat the games as entertainment, not a guaranteed income source.',
+              'Do not share your login information with friends.',
+              'Take regular breaks during longer sessions.'
+            ].map((tip, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#0d1835]/80 to-[#06091F] p-4 shadow-inner transition-all hover:border-emerald-500/35 md:p-5"
+              >
+                <p className="text-sm font-medium uppercase tracking-wider text-emerald-400/90">Tip {i + 1}</p>
+                <p className="mt-2 leading-relaxed text-gray-300">{tip}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Smart Tips */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-[#FFA500]">Smart Tips to Earn Maximum on Teen Patti Spin</h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-300">
-            <li>If you are a beginner, start with games that have a low betting amount.</li>
-            <li>Choose the games that are easy and according to your interests.</li>
-            <li>Do not chase losses or try to recover them by betting higher amounts.</li>
-            <li>Take advantage of daily rewards, cashbacks, and promotional offers.</li>
-            <li>Observe your opponents before playing high bets.</li>
+        <div className={sectionShell}>
+          <SectionHeading title="Smart Tips to Earn Maximum on Teen Patti Spin" subtitle="Small habits that protect your bankroll while you climb stakes." />
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {[
+              'If you are a beginner, start with games that have a low betting amount.',
+              'Choose the games that are easy and according to your interests.',
+              'Do not chase losses or try to recover them by betting higher amounts.',
+              'Take advantage of daily rewards, cashbacks, and promotional offers.',
+              'Observe your opponents before playing high bets.'
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-3 rounded-2xl border border-amber-500/20 bg-[#06091F]/70 px-4 py-3.5 text-gray-300 backdrop-blur-sm"
+              >
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber-500/20 text-xs font-bold text-amber-400">✓</span>
+                <span className="leading-relaxed">{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
 
       {/* Pros & Cons */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Pros &amp; Cons</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-[#0a1029]/50 rounded-xl p-6 border border-green-500/40">
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Pros</h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                <li>Variety of exciting games</li>
-                <li>Real earning opportunities</li>
-                <li>Tournaments and special events</li>
-                <li>Regular updates</li>
-                <li>24/7 customer support</li>
+        <div className={sectionShell}>
+          <SectionHeading title="Pros & Cons" subtitle="A quick honest snapshot before you install or deposit." />
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-2xl border border-emerald-500/35 bg-gradient-to-b from-emerald-950/40 to-[#06091F] p-6 shadow-lg shadow-emerald-900/20 md:p-8">
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-emerald-500/10 blur-2xl" />
+              <h3 className="relative text-2xl font-bold text-emerald-400">Pros</h3>
+              <ul className="relative mt-4 space-y-3 text-gray-300">
+                {['Variety of exciting games', 'Real earning opportunities', 'Tournaments and special events', 'Regular updates', '24/7 customer support'].map((p) => (
+                  <li key={p} className="flex gap-2">
+                    <span className="text-emerald-400" aria-hidden>
+                      +
+                    </span>
+                    <span>{p}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="bg-[#0a1029]/50 rounded-xl p-6 border border-red-500/40">
-              <h3 className="text-2xl font-bold mb-4 text-red-400">Cons</h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                <li>Needs an internet connection</li>
-                <li>Third-party application</li>
-                <li>No legal support</li>
-                <li>Gaming can be addictive</li>
-                <li>Risk of losing money</li>
+            <div className="relative overflow-hidden rounded-2xl border border-red-500/35 bg-gradient-to-b from-red-950/30 to-[#06091F] p-6 shadow-lg shadow-red-900/20 md:p-8">
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-red-500/10 blur-2xl" />
+              <h3 className="relative text-2xl font-bold text-red-400">Cons</h3>
+              <ul className="relative mt-4 space-y-3 text-gray-300">
+                {['Needs an internet connection', 'Third-party application', 'No legal support', 'Gaming can be addictive', 'Risk of losing money'].map((c) => (
+                  <li key={c} className="flex gap-2">
+                    <span className="text-red-400" aria-hidden>
+                      −
+                    </span>
+                    <span>{c}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -715,9 +866,9 @@ export default function Home() {
 
       {/* Conclusion */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Conclusion</h2>
-          <p className="text-gray-300 leading-relaxed">
+        <div className={`${sectionShell} border-sky-500/20`}>
+          <h2 className="text-2xl font-bold text-sky-400 md:text-3xl">Conclusion</h2>
+          <p className="mt-4 max-w-4xl leading-relaxed text-gray-300">
             Teen Patti Spin has gained massive popularity due to its ease of use and earning opportunities. The platform offers a variety of games to play and earn without any worry. When you are playing on this platform you do not feel bored. This earning app is lightweight and needs only a stable internet connection for smooth performance. Teen Patti Spin regularly updates the game to add new features, making it the best gaming platform. You can get different rewards, bonuses and free chips to play games without spending your own money.
           </p>
         </div>
@@ -725,8 +876,8 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="faqs">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Frequently Asked Questions</h2>
+        <div className={sectionShell}>
+          <SectionHeading title="Frequently Asked Questions" subtitle="Answers mirror our structured FAQ schema for consistency and clarity." />
           <div className="space-y-3">
             {[
               { q: 'What is Teen Patti Spin?', a: 'Teen Patti Spin Game is an online earning and gaming platform where you can join high and low stakes tables to play and earn money. The app is lightweight and runs smoothly even on low-end devices.' },
@@ -740,16 +891,19 @@ export default function Home() {
               { q: 'Can I download Teen Patti Spin on iOS?', a: 'Yes, you can easily download Teen Patti Spin on iOS devices. Go to the Safari browser and search for the Teen Patti Spin official app to download it on your iOS device.' },
               { q: 'What should I do if my transactions fail?', a: 'Refresh the page or check that your internet connection is stable. You can also contact the customer support team of Teen Patti Spin with transaction proofs to get help.' }
             ].map((item) => (
-              <details key={item.q} className="group bg-[#0a1029]/50 rounded-xl border border-gray-700">
-                <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium">
-                  {item.q}
-                  <span className="transition group-open:rotate-180">
-                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
+              <details
+                key={item.q}
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-[#06091F]/60 shadow-md transition-colors open:border-sky-500/30 open:bg-[#0A1029]/80"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 font-medium text-white marker:content-none [&::-webkit-details-marker]:hidden md:p-5">
+                  <span>{item.q}</span>
+                  <span className="shrink-0 text-sky-400 transition-transform duration-200 group-open:rotate-180">
+                    <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24" aria-hidden>
                       <path d="M6 9l6 6 6-6"></path>
                     </svg>
                   </span>
                 </summary>
-                <div className="p-4 pt-0 text-gray-300">{item.a}</div>
+                <div className="border-t border-white/5 px-4 pb-4 pt-3 leading-relaxed text-gray-300 md:px-5 md:pb-5">{item.a}</div>
               </details>
             ))}
           </div>

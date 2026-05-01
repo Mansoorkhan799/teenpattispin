@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     url: 'https://teenpattispingame.com.pk/contact-us',
     siteName: 'Teen Patti Spin',
     type: 'website',
-    images: [{ url: 'https://teenpattispingame.com.pk/Teen-Patti-Spin.webp', width: 1200, height: 630, alt: 'Teen Patti Spin' }],
+    images: [{ url: 'https://teenpattispingame.com.pk/teen-patti-spin.webp', width: 1200, height: 630, alt: 'Teen Patti Spin' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us - Teen Patti Spin',
     description: 'Get in touch with Teen Patti Spin support team for any queries or assistance.',
-    images: ['https://teenpattispingame.com.pk/Teen-Patti-Spin.webp'],
+    images: ['https://teenpattispingame.com.pk/teen-patti-spin.webp'],
   },
   alternates: {
     canonical: 'https://teenpattispingame.com.pk/contact-us',

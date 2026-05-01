@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "How to Earn Money in Teen Patti Spin – Complete Earning Guide",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to Earn Money in Teen Patti Spin - Complete Earning Guide 2026",
     description: "Complete guide on how to earn real money through Teen Patti Spin games, bonuses, and referral program.",
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -56,7 +56,7 @@ export default function HowToEarnMoneyPage() {
     "@type": "BlogPosting",
     "headline": "How to Earn Money in Teen Patti Spin - Complete Earning Guide 2026",
     "description": "Complete guide on various ways to earn real money in Teen Patti Spin.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -67,7 +67,7 @@ export default function HowToEarnMoneyPage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-05",
@@ -154,7 +154,7 @@ export default function HowToEarnMoneyPage() {
         
         <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
           <Image
-            src="/Teen-Patti-Spin-Free-Bonus.webp"
+            src="/3-patti-spin-bonuses.webp"
             alt="How to Earn Money in Teen Patti Spin"
             fill
             className="object-cover"

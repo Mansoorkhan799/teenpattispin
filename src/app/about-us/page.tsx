@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "About Teen Patti Spin - Premier Card Gaming Platform",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: 'About Teen Patti Spin - Pakistan\'s Premier Card Gaming Platform',
     description: 'Learn about Teen Patti Spin, our history, mission, and vision for creating the best card gaming platform in Pakistan with real cash rewards.',
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-[#0A1029]">
                   <Link href="/">
                     <Image 
-                      src="/Teen-Patti-Spin.webp" 
+                      src="/teen-patti-spin.webp" 
                       alt="Teen Patti Spin Logo" 
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 320px"
@@ -120,7 +120,7 @@ export default function AboutPage() {
               "name": "Teen Patti Spin",
               "alternateName": "3 Patti Spin",
               "url": "https://teenpattispingame.com.pk",
-              "logo": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+              "logo": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
               "description": "Teen Patti Spin is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, Dragon vs Tiger and more with real cash rewards.",
               "foundingDate": "2024",
               "foundingLocation": {

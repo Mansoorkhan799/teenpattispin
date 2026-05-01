@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "Tips and Strategies to Win in Teen Patti Spin – Expert Guide",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tips and Strategies to Win in Teen Patti Spin - Expert Guide 2026",
     description: "Expert tips and strategies to increase your winning chances in Teen Patti Spin games.",
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -56,7 +56,7 @@ export default function TipsToWinPage() {
     "@type": "BlogPosting",
     "headline": "Tips and Strategies to Win in Teen Patti Spin - Expert Guide 2026",
     "description": "Expert tips and strategies to help you win more games in Teen Patti Spin.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -67,7 +67,7 @@ export default function TipsToWinPage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-05",
@@ -179,7 +179,7 @@ export default function TipsToWinPage() {
         
         <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
           <Image
-            src="/Teen-Patti-Spin-Dragon-Tiger.webp"
+            src="/3-patti-spin-game.webp"
             alt="Tips to Win Teen Patti Spin"
             fill
             className="object-cover"

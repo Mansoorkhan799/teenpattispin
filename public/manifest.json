@@ -8,13 +8,13 @@
   "theme_color": "#06091F",
   "icons": [
     {
-      "src": "/Teen-Patti-Spin-logo.webp",
+      "src": "/teen-patti-spin.webp",
       "sizes": "192x192 512x512",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/Teen-Patti-Spin-logo.webp",
+      "src": "/teen-patti-spin.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any"

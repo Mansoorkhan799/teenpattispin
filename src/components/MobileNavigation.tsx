@@ -62,8 +62,8 @@ export default function MobileNavigation() {
             <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
               <div className="relative w-8 h-8 flex-shrink-0">
                 <Image
-                  src="/Teen-Patti-Spin.webp"
-                  alt="Teen Patti Spin Logo"
+                  src="/teen-patti-spin.webp"
+                  alt="Teen Patti Spin"
                   fill
                   sizes="(max-width: 768px) 32px, 40px"
                   className="object-contain"
@@ -125,13 +125,6 @@ export default function MobileNavigation() {
               onClick={() => setIsOpen(false)}
             >
               PC Version
-            </Link>
-            <Link 
-              href="/teen-patti-spin-for-ios" 
-              className="text-white hover:text-accent py-2 text-lg font-medium transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              iOS Version
             </Link>
             <Link 
               href="/about-us" 

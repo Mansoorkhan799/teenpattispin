@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "How to Create Account and Login in Teen Patti Spin",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to Create Account and Login in Teen Patti Spin - Step by Step Guide 2026",
     description: "Complete guide on how to create an account and login to Teen Patti Spin app.",
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -56,7 +56,7 @@ export default function HowToCreateAccountLoginPage() {
     "@type": "BlogPosting",
     "headline": "How to Create Account and Login in Teen Patti Spin - Step by Step Guide 2026",
     "description": "Complete step-by-step guide on how to create an account and login to Teen Patti Spin.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -67,7 +67,7 @@ export default function HowToCreateAccountLoginPage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-05",
@@ -157,7 +157,7 @@ export default function HowToCreateAccountLoginPage() {
         
         <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
           <Image
-            src="/Teen-Patti-Spin.webp"
+            src="/teen-patti-spin.webp"
             alt="How to Create Account and Login in Teen Patti Spin"
             fill
             className="object-cover"

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+        url: "https://teenpattispingame.com.pk/teen-patti-spin.webp",
         width: 1200,
         height: 630,
         alt: "Is Teen Patti Spin Real or Fake – Complete Guide 2026",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Is Teen Patti Spin Real or Fake to Earn Money?",
     description: "Complete guide about Teen Patti Spin legitimacy, payment methods, and safety tips for Pakistani players.",
-    images: ["https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"],
+    images: ["https://teenpattispingame.com.pk/teen-patti-spin.webp"],
   },
 };
 
@@ -58,7 +58,7 @@ export default function PattiSpinRealOrFakePage() {
     "@type": "BlogPosting",
     "headline": "Is Teen Patti Spin Real or Fake to Earn Money? - Complete Guide 2026",
     "description": "Discover if Teen Patti Spin app is real or fake. Learn about legitimacy, payment methods, safety tips, and how to identify fake apps.",
-    "image": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp",
+    "image": "https://teenpattispingame.com.pk/teen-patti-spin.webp",
     "author": {
       "@type": "Organization",
       "name": "Teen Patti Spin",
@@ -69,7 +69,7 @@ export default function PattiSpinRealOrFakePage() {
       "name": "Teen Patti Spin",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://teenpattispingame.com.pk/Teen-Patti-Spin.webp"
+        "url": "https://teenpattispingame.com.pk/teen-patti-spin.webp"
       }
     },
     "datePublished": "2026-01-04",
@@ -146,7 +146,7 @@ export default function PattiSpinRealOrFakePage() {
         {/* Featured Image */}
         <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
           <Image
-            src="/Teen-Patti-Spin.webp"
+            src="/teen-patti-spin.webp"
             alt="Teen Patti Spin Real or Fake"
             fill
             className="object-cover"
@@ -420,9 +420,9 @@ export default function PattiSpinRealOrFakePage() {
                 <h4 className="text-white font-semibold mb-2">📥 Download Teen Patti Spin APK</h4>
                 <p className="text-gray-400 text-sm">Get the latest version of Teen Patti Spin for Android</p>
               </Link>
-              <Link href="/teen-patti-spin-for-ios" className="bg-[#0A1029] p-4 rounded-lg hover:bg-[#0A1029]/70 transition-colors">
-                <h4 className="text-white font-semibold mb-2">📱 Teen Patti Spin for iOS</h4>
-                <p className="text-gray-400 text-sm">Download Teen Patti Spin for iPhone and iPad</p>
+              <Link href="/teen-patti-spin-for-pc" className="bg-[#0A1029] p-4 rounded-lg hover:bg-[#0A1029]/70 transition-colors">
+                <h4 className="text-white font-semibold mb-2">🖥 Teen Patti Spin for PC</h4>
+                <p className="text-gray-400 text-sm">Play with an Android emulator on Windows</p>
               </Link>
             </div>
           </div>

@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 2, 6, 23;
+}
+
+/* Font optimization - prevent FOUT/FOIT */
+@layer base {
+  * {
+    font-display: swap;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  /* Prevent CLS from scrollbar */
+  overflow-y: scroll;
+  padding-bottom: 0;
+}
+
+/* Prevent CLS by ensuring images don't shift layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent CLS for Next.js Image component */
+img[loading="lazy"] {
+  /* Removed content-visibility as it can cause flickering */
+}
+
+/* Reserve space for images */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 177.75%; /* 711/400 = 1.7775 for screenshot aspect ratio */
+}
+
+/* Prevent layout shift for icons and SVGs */
+svg {
+  display: block;
+}
+
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+}
+
+.download-btn:hover .download-icon {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(10, 16, 41, 0.8);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Prevent layout shift by ensuring content takes up space */
+.stars-bg {
+  pointer-events: none;
+}
+
+/* Footer - explicit min-height prevents CLS when content loads */
+footer {
+  min-height: 450px;
+}
+
+/* Deferred animation styles - inlined here to prevent late-loading CLS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.5s ease-in-out; }
+.hover-scale { transition: transform 0.3s ease; }
+.hover-scale:hover { transform: scale(1.05); }
+.enhanced-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+.enhanced-gradient { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); }
+.enhanced-text { text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: 0.025em; }
+.enhanced-border { border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(8px); }
+
+
+/* Prevent image blinking/flickering on scroll */
+.image-container-smooth {
+  /* Create isolated rendering context */
+  isolation: isolate;
+  contain: layout style;
+  /* Prevent layout shifts */
+  position: relative;
+  display: block;
+  /* Force GPU layer for smooth scrolling */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optimize Next.js Image wrapper */
+.image-container-smooth > span,
+.image-container-smooth picture {
+  display: block;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optimize images inside container */
+.image-container-smooth img {
+  display: block;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Smooth rendering */
+  image-rendering: auto;
+} 

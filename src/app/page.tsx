@@ -12,6 +12,19 @@ const featureCard =
 const stepPanel =
   'rounded-2xl border border-white/10 bg-[#06091F]/50 p-5 backdrop-blur-sm md:p-6';
 
+/** App screenshots on the home page (hero uses /teen-patti-spin.webp only). */
+const homeAppGallery: { src: string; alt: string; caption: string }[] = [
+  { src: '/3-patti-spin-game.webp', alt: 'Teen Patti Spin card table gameplay', caption: 'Tables & Teen Patti modes' },
+  { src: '/3-patti-spin-game-interface.webp', alt: 'Teen Patti Spin lobby and game selection', caption: 'Lobby & games' },
+  { src: '/3-patti-spin-account.webp', alt: 'Teen Patti Spin account and profile screen', caption: 'Account & profile' },
+  { src: '/3-patti-spin-add-money.webp', alt: 'Teen Patti Spin add money deposit screen', caption: 'Deposits' },
+  { src: '/3-patti-spin-withdraw-money.webp', alt: 'Teen Patti Spin withdraw money screen', caption: 'Withdrawals' },
+  { src: '/3-patti-spin-bonuses.webp', alt: 'Teen Patti Spin bonuses and promotions', caption: 'Bonuses' },
+  { src: '/3-patti-spin-refer-and-earn.webp', alt: 'Teen Patti Spin refer and earn', caption: 'Refer & earn' },
+  { src: '/3-patti-spin-spin-wheel.webp', alt: 'Teen Patti Spin lucky wheel mini game', caption: 'Wheel & mini games' },
+  { src: '/teen-patti-spin-recharge-rebate.webp', alt: 'Teen Patti Spin recharge rebate', caption: 'Recharge rebates' },
+];
+
 function StepRow({ n, children }: { n: number; children: ReactNode }) {
   return (
     <li className="flex gap-4 rounded-2xl border border-white/10 bg-[#06091F]/70 px-4 py-3.5 backdrop-blur-sm transition-all duration-300 hover:border-sky-500/40 hover:bg-[#0A1029]/80">
@@ -23,10 +36,12 @@ function StepRow({ n, children }: { n: number; children: ReactNode }) {
   );
 }
 
-function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
+function SectionHeading({ title, subtitle, id }: { title: string; subtitle?: string; id?: string }) {
   return (
     <div className="mb-8 md:mb-10">
-      <h2 className="text-2xl font-bold tracking-tight text-[#FFA500] md:text-3xl lg:text-4xl">{title}</h2>
+      <h2 id={id} className="text-2xl font-bold tracking-tight text-[#FFA500] md:text-3xl lg:text-4xl">
+        {title}
+      </h2>
       {subtitle ? <p className="mt-2 max-w-3xl text-gray-400">{subtitle}</p> : null}
     </div>
   );
@@ -141,7 +156,14 @@ export default function Home() {
         "screenshot": [
           "https://teenpattispingame.com.pk/teen-patti-spin.webp",
           "https://teenpattispingame.com.pk/3-patti-spin-game.webp",
-          "https://teenpattispingame.com.pk/3-patti-spin-game-interface.webp"
+          "https://teenpattispingame.com.pk/3-patti-spin-game-interface.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-account.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-add-money.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-withdraw-money.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-bonuses.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-refer-and-earn.webp",
+          "https://teenpattispingame.com.pk/3-patti-spin-spin-wheel.webp",
+          "https://teenpattispingame.com.pk/teen-patti-spin-recharge-rebate.webp"
         ],
         "author": {
           "@type": "Organization",
@@ -368,6 +390,39 @@ export default function Home() {
             <p className="text-gray-300 leading-relaxed">
               This earning app also includes simple card games, which are easier for beginners to play and earn. With a simple and easy interface, you can enjoy this platform without any difficulty. Teen Patti Spin also has a 24/7 available customer support team, so if you have any issues, you can connect with them to get the solutions quickly.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* App gallery — all /public webp assets except hero (teen-patti-spin.webp) */}
+      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="app-screenshots" aria-labelledby="app-screenshots-heading">
+        <div className={sectionShell}>
+          <SectionHeading
+            id="app-screenshots-heading"
+            title="Inside the app"
+            subtitle="Real in-game screens—tables, wallet, bonuses, referrals, and more."
+          />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {homeAppGallery.map((item) => (
+              <figure
+                key={item.src}
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-[#06091F]/60 shadow-lg shadow-black/25 transition-all duration-300 hover:border-sky-500/35 hover:shadow-sky-500/10"
+              >
+                <div className="relative aspect-[4/3] w-full bg-[#0a1029]/80">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={75}
+                  />
+                </div>
+                <figcaption className="border-t border-white/10 px-4 py-3 text-center text-sm font-medium text-gray-300">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

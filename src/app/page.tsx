@@ -199,30 +199,16 @@ export default function Home() {
       <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="md:flex md:items-start md:justify-between md:space-x-12 lg:space-x-20">
           <div className="md:w-1/2 space-y-6">
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center md:items-start md:gap-5">
-              <div className="relative h-20 w-20 shrink-0 sm:h-24 sm:w-24 md:hidden">
-                <Image
-                  src="/teen-patti-spin.webp"
-                  alt="Teen Patti Spin"
-                  width={96}
-                  height={96}
-                  className="object-contain drop-shadow-xl"
-                  priority
-                  fetchPriority="high"
-                  sizes="96px"
-                />
-              </div>
-              <div className="space-y-4 text-center sm:text-left">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                  <Link href="/" className="hover:text-[#FFA500] transition-colors">
-                    <span className="text-white">Teen Patti Spin</span>
-                  </Link>
-                </h1>
-                <h2 className="text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl lg:text-[2.5rem] lg:leading-tight">
-                  <span className="block text-[#FFA500]">Pakistan&apos;s Most Trusted</span>
-                  <span className="block text-white">3 Patti Gaming Platform 2026</span>
-                </h2>
-              </div>
+            <div className="space-y-4 text-center sm:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+                <Link href="/" className="hover:text-[#FFA500] transition-colors">
+                  <span className="text-white">Teen Patti Spin</span>
+                </Link>
+              </h1>
+              <h2 className="text-2xl font-bold leading-snug text-white sm:text-3xl md:text-4xl lg:text-[2.5rem] lg:leading-tight">
+                <span className="block text-[#FFA500]">Pakistan&apos;s Most Trusted</span>
+                <span className="block text-white">3 Patti Gaming Platform 2026</span>
+              </h2>
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
@@ -236,7 +222,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="relative flex items-center px-8 py-4 text-white font-semibold text-lg rounded-full border-2 border-[#0ea5e9] hover:bg-[#0ea5e9]/10 transition-all group"
               >
-                <span>DOWNLOAD TEEN PATTI SPIN</span>
+                <span>DOWNLOAD NOW</span>
                 <div className="ml-3 bg-[#f97316] rounded-full p-2 group-hover:scale-110 transition-transform">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
@@ -302,23 +288,6 @@ export default function Home() {
                 fetchPriority="high"
                 quality={75}
                 sizes="320px"
-              />
-            </div>
-          </div>
-
-          {/* Mobile Image */}
-          <div className="mt-8 md:hidden">
-            <div className="relative mx-auto w-[280px] h-[280px] max-w-full">
-              <Image
-                src="/teen-patti-spin.webp"
-                alt="Teen Patti Spin"
-                width={280}
-                height={280}
-                className="object-contain drop-shadow-2xl w-full h-full"
-                priority
-                fetchPriority="high"
-                quality={75}
-                sizes="280px"
               />
             </div>
           </div>

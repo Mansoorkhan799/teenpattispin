@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://teenpattispingame.com.pk'),
   title: {
-    default: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    default: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     template: "%s | Teen Patti Spin"
   },
   description: "Download Teen Patti Spin APK – play Teen Patti, Rummy & more. Win real cash via JazzCash & EasyPaisa. Join 500K+ players in Pakistan!",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     canonical: "https://teenpattispingame.com.pk",
   },
   openGraph: {
-    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    title: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     description: "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
     url: "https://teenpattispingame.com.pk",
     siteName: "Teen Patti Spin",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    title: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     description: "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
     creator: "@teenpattispin",
   },

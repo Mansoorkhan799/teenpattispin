@@ -98,11 +98,6 @@ svg {
   pointer-events: none;
 }
 
-/* Footer - explicit min-height prevents CLS when content loads */
-footer {
-  min-height: 450px;
-}
-
 /* Deferred animation styles - inlined here to prevent late-loading CLS */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }

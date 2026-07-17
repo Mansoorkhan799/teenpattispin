@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer style={{ minHeight: '450px' }} className="bg-primary text-white py-8 px-4 md:px-8 border-t border-gray-800 relative z-20">
+    <footer className="bg-primary text-white py-8 px-4 md:px-8 border-t border-gray-800 relative z-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Column - fixed dimensions prevent CLS */}

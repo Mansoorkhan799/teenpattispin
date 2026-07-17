@@ -49,7 +49,7 @@ function SectionHeading({ title, subtitle, id }: { title: string; subtitle?: str
 
 export const metadata: Metadata = {
   title: {
-    default: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    default: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     template: "%s | Teen Patti Spin"
   },
   description:
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     "best earning app Pakistan"
   ],
   openGraph: {
-    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    title: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     description:
       "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti Spin – Classic, Joker, Muflis, AK47, Rummy & more. Earn real money with JazzCash & EasyPaisa.",
     images: [
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Teen Patti Spin | Pakistan's Most Trusted 3 Patti Gaming Platform 2026",
+    title: "Teen Patti Spin Pakistan v1.652 | Free Download Official APK",
     description:
       "Join 500K+ players on Pakistan's premier card game platform. Play Teen Patti Spin & earn real money with JazzCash & EasyPaisa.",
     images: ['https://teenpattispingame.com.pk/teen-patti-spin.webp']
@@ -363,36 +363,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App gallery — all /public webp assets except hero (teen-patti-spin.webp) */}
+      {/* App gallery — simple screenshot grid */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="app-screenshots" aria-labelledby="app-screenshots-heading">
-        <div className={sectionShell}>
-          <SectionHeading
-            id="app-screenshots-heading"
-            title="Inside the app"
-            subtitle="Real in-game screens—tables, wallet, bonuses, referrals, and more."
-          />
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {homeAppGallery.map((item) => (
-              <figure
-                key={item.src}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-[#06091F]/60 shadow-lg shadow-black/25 transition-all duration-300 hover:border-sky-500/35 hover:shadow-sky-500/10"
-              >
-                <div className="relative aspect-[4/3] w-full bg-[#0a1029]/80">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    quality={75}
-                  />
-                </div>
-                <figcaption className="border-t border-white/10 px-4 py-3 text-center text-sm font-medium text-gray-300">
-                  {item.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+        <h2 id="app-screenshots-heading" className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+          Inside the app
+        </h2>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {homeAppGallery.map((item) => (
+            <figure key={item.src} className="flex flex-col items-center">
+              <div className="relative w-full overflow-hidden rounded-xl aspect-video">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={80}
+                />
+              </div>
+              <figcaption className="mt-3 text-center text-sm text-gray-300">
+                {item.caption}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

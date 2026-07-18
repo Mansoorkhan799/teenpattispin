@@ -244,7 +244,7 @@ export default function MobileNavigation() {
 
                 <div className="shrink-0 border-t border-white/[0.06] bg-[#121214] px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3">
                   <Link
-                    href="/download-teen-patti-spin"
+                    href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
                     onClick={close}
                     className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-emerald-900/30 transition-colors hover:bg-emerald-500 active:bg-emerald-700"
                   >

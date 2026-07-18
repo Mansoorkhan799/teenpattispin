@@ -362,7 +362,7 @@ export default function TipsToWinPage() {
             Now that you know these winning strategies, put them into practice. Remember, success in Teen Patti Spin comes from combining skill, strategy, and discipline.
           </p>
           <Link 
-            href="/download-teen-patti-spin"
+            href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
             className="inline-block bg-accent hover:bg-[#FFA500] text-white font-bold py-3 px-8 rounded-full transition-colors"
           >
             Start Playing Now

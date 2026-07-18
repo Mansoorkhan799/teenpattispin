@@ -36,7 +36,7 @@ export default function DepositMoneyPage() {
               Quick, Safe & Easy Payment Methods with JazzCash and EasyPaisa
             </p>
             <Link
-              href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+              href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105"
@@ -293,7 +293,7 @@ export default function DepositMoneyPage() {
               Download Teen Patti Spin now and deposit money to start earning real cash!
             </p>
             <Link
-              href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+              href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105"

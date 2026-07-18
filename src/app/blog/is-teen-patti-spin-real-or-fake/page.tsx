@@ -347,7 +347,7 @@ export default function PattiSpinRealOrFakePage() {
             {/* CTA Button */}
             <div className="mt-6 text-center">
               <a 
-                href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+                href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl"

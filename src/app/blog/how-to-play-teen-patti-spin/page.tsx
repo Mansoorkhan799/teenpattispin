@@ -327,7 +327,7 @@ export default function HowToPlayPage() {
             Now that you know how to play Teen Patti Spin, download the app and start your gaming journey. Remember to play responsibly and within your budget.
           </p>
           <Link 
-            href="/download-teen-patti-spin"
+            href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
             className="inline-block bg-accent hover:bg-[#FFA500] text-white font-bold py-3 px-8 rounded-full transition-colors"
           >
             Download Teen Patti Spin Now

@@ -71,7 +71,7 @@ export default function DownloadPage() {
       "ratingCount": "600000",
       "bestRating": "5"
     },
-    "downloadUrl": "https://teenpattispingame.com.pk/download-teen-patti-spin",
+    "downloadUrl": "https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000",
     "softwareVersion": "v1.652(0)",
     "fileSize": "54MB",
     "datePublished": "2026-02-06",
@@ -164,7 +164,7 @@ export default function DownloadPage() {
         {/* Download Button - Prominent */}
         <div className="flex justify-center my-12">
           <a 
-            href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+            href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center px-12 py-6 text-white font-bold text-xl rounded-full border-2 border-[#0ea5e9] hover:bg-[#0ea5e9]/10 transition-all group shadow-2xl"
@@ -248,7 +248,7 @@ export default function DownloadPage() {
         {/* Download Button After Table */}
         <div className="flex justify-center mt-8">
           <a 
-            href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+            href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
             target="_blank"
             rel="noopener noreferrer"
             className="download-btn bg-transparent hover:bg-[#0ea5e9]/10 text-white font-bold py-4 px-8 rounded-full inline-flex items-center transition-all shadow-lg hover:shadow-xl border-2 border-[#0ea5e9]"

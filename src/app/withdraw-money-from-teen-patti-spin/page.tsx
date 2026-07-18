@@ -36,7 +36,7 @@ export default function WithdrawMoneyPage() {
               Fast, Secure & Easy Cash Out with JazzCash, EasyPaisa & Bank Transfer
             </p>
             <Link
-              href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+              href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105"
@@ -323,7 +323,7 @@ export default function WithdrawMoneyPage() {
               Download Teen Patti Spin now and start withdrawing your earnings securely!
             </p>
             <Link
-              href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+              href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-accent/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105"

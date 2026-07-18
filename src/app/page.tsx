@@ -148,7 +148,7 @@ export default function Home() {
           "price": "0",
           "priceCurrency": "PKR"
         },
-        "downloadUrl": "https://teenpattispingame.com.pk/download-teen-patti-spin",
+        "downloadUrl": "https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000",
         "softwareVersion": "v1.652(0)",
         "fileSize": "54MB",
         "description":
@@ -217,7 +217,7 @@ export default function Home() {
 
             <div className="flex justify-center my-8">
               <a
-                href="https://teenpattispingame.com.pk/download-teen-patti-spin"
+                href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative flex items-center px-8 py-4 text-white font-semibold text-lg rounded-full border-2 border-[#0ea5e9] hover:bg-[#0ea5e9]/10 transition-all group"

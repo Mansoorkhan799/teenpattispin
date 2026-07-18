@@ -381,7 +381,7 @@ export default function FeaturesBenefitsPage() {
             Now that you know all the amazing features and benefits of Teen Patti Spin, download the app and start enjoying the best card gaming experience in Pakistan.
           </p>
           <Link 
-            href="/download-teen-patti-spin"
+            href="https://spinteenpatti.com/?from_gameid=5987869&channelCode=300000"
             className="inline-block bg-accent hover:bg-[#FFA500] text-white font-bold py-3 px-8 rounded-full transition-colors"
           >
             Download Teen Patti Spin Now

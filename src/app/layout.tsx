@@ -66,9 +66,6 @@ export const metadata: Metadata = {
     shortcut: ['/teen-patti-spin.ico']
   },
   manifest: '/manifest.json',
-  verification: {
-    google: "8a7c21f6e90a89ef",
-  },
   alternates: {
     canonical: "https://teenpattispingame.com.pk",
   },
